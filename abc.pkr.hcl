@@ -25,15 +25,15 @@ build {
   provisioner "shell" {
     inline = [
       "sudo apt update",
-      "wget -O - https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg",
-      "echo  'deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main' | 'sudo tee /etc/apt/sources.list.d/hashicorp.list'",   
+      "curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -",
+      "sudo apt-add-repository \"deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main\"", 
       "sudo apt install unzip -y",
       "sudo apt install wget -y",
       "sudo apt install net-tools -y",
       "sudo apt install jq -y",
       "sudo apt list -a vault",
       "sudo apt show vault",
-      "sudo apt install vault='1.18.0'",
+      "sudo apt install -y vault"
     ]
   }
   
