@@ -1,13 +1,13 @@
 # **test-repo**
 ---
 
-git status
+### git status
 ---
-git add .
+### git add .
 ---
-git status
+### git status
 ---
-git commit -m "add main.tf"
+### git commit -m "add main.tf"
 ---
 ```bash 
 ##clone the repo
