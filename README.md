@@ -1,5 +1,5 @@
 # **test-repo**
-
+---
 
 git status
 ---
@@ -20,4 +20,6 @@ git remote -v
 git pull origin main --rebase
 ##push 
 git push origin main
+```
 ---
+git push origin main
